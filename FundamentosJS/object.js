@@ -1,5 +1,5 @@
 const prod1 = {}
-//se fosse um par de cochetes seria um array.  Como é um par de chaves, é considero um object. 
+//se fosse um par de cochetes seria um array.  Como é um par de chaves, é considerado um object. 
 // o objeto será uma conjunção de chaves e valores. 
 prod1.nome = 'celular ultra mega'
 prod1.preco = 4998.00
