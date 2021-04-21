@@ -11,7 +11,7 @@ const resultado = function (nota) {
     } else {
         console.log ('Nota inválida')
     }
-    console.log ('FIM')
+    
 } 
  
 resultado (10)
@@ -20,3 +20,5 @@ resultado (6.55)
 resultado (2.3)
 resultado (-1)
 resultado (11)
+
+console.log ('FIM')
