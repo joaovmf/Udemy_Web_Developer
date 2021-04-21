@@ -24,20 +24,17 @@ pessoa2.nomeinteiro ()
 // O this é como se evitasse a repetição do nome, reduzindo assim a frase. 
 //Abaixo podemos ver a utilização do bind 
 
-const exemplo = {
-    a: 0,
-    pegueA: function() {
-      return this.a;
-    }
-  };
+var myButton = {
+  content: 'OK',
+  click() {
+    console.log(this.content + ' clicked');
+  }
+};
 
-console.log (exemplo.pegueA())
-  
-  const exemplo2 = exemplo.pegueA;
-  console.log(exemplo2()); // The function gets invoked at the global scope
-  
-  
-  const exemplo3 = exemplo2.bind(exemplo);
-  console.log(exemplo3());
-  
-  
+myButton.click();
+
+var looseClick = myButton.click;
+looseClick(); // not bound, 'this' is not myButton - it is the globalThis
+
+var boundClick = myButton.click.bind(myButton);
+boundClick(); // bound, 'this' is myButton
