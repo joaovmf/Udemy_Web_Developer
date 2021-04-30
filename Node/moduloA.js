@@ -4,4 +4,6 @@
 
 this.ola = 'Fala pessoal'
 exports.bemVindo = 'Bem vindo ao node!'
-module.exports.ateLogo = ' Até mais pessoal! '
+module.exports.ateLogo = ' Até o proximo exemplo!  '
+
+//this é um objeto vazio, onde você pode atribuir varios atributos a ele.   
