@@ -13,4 +13,3 @@ if (anonimo) {
         process.exit()
     })
 }
-
