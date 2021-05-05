@@ -22,12 +22,15 @@ const getturma = letra => {
     })
 }   
 
+//recurso do ES8 
+    //objetivo de simplificar o uso de promises.. 
+    let obteralunos = async () => {
+        const ta = await getturma('A')
+        const tb = await getturma ('B')
+        const tc = await getturma ('C')
+        return [].concat(ta,tb,tc)
+    } //retorna um objeto asyncFunction 
 
-Promise.all([getturma ('A'), getturma ('B'), getturma ('C')])
-    .then (turmas => [].concat(...turmas))
-    .then(alunos => alunos.map(aluno => aluno.nome))
-    .then(nomes => console.log(nomes))
-    .catch(e => console.log (e.message))
-
-    getturma ('D').catch(e => console.log (e.message))
-
+    obteralunos ()
+        .then(alunos => alunos.map(a =>a.nome))
+        .then(nomes => console.log(nomes))
