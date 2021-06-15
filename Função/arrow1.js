@@ -20,3 +20,4 @@ ola = () => 'Olá!'
 ola = _ => 'Olá!'
 
 console.log (ola ())
+
