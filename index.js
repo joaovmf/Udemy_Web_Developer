@@ -77,7 +77,7 @@ const StarWars = [{nome: 'Episódio 1 - Ameaça Fantasma',
 
     console.log (' ')
 
-function sequenciaTime() {
+sequenciaTime = () => {
     console.log (`-----------------------------------------------`)
     console.log (`| Ordem de acordo com a cronologia dos fatos  |`)
     console.log (`-----------------------------------------------`)
@@ -92,7 +92,7 @@ function sequenciaTime() {
 
 //sequenciaTime()
 
-function trilogiaClassica () {
+trilogiaClassica = () => {
     console.log (`---------------------`)
     console.log (`| Trilogia Clássica |`)
     console.log (`---------------------`)
@@ -107,7 +107,7 @@ function trilogiaClassica () {
 
 //trilogiaClassica()
 
-function trilogiaPrequel () {
+trilogiaPrequel = () => {
     console.log (`--------------------`)
     console.log (`| Trilogia Prequel |`)
     console.log (`--------------------`)
@@ -122,7 +122,7 @@ function trilogiaPrequel () {
 
 //trilogiaPrequel()
 
-function novaTrilogia () {
+novaTrilogia = () => {
     console.log (`-----------------`)
     console.log (`| Nova Trilogia |`)
     console.log (`-----------------`)
@@ -137,7 +137,7 @@ function novaTrilogia () {
 
 //novaTrilogia()
 
-function spinOff () {
+spinOff = () => {
     console.log (`-----------`)
     console.log (`| SpinOff |`)
     console.log (`-----------`)
