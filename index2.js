@@ -1,132 +1,74 @@
-const starWars = [{nome: 'Episódio 1 - Ameaça Fantasma',
-        ano: 1999,
-        ordenacao: 'Quarto Lançamento',
-        imagem: 'https://i.pinimg.com/originals/61/1d/ba/611dba23cb1e960da85a261cfa8bb6e7.jpg',
-        id: 'prequel'
-    },
-    {
-        nome: 'Episódio 2 - Ataque dos clones',
-        ano: 2002,
-        ordenacao: 'Quinto Lançamento',
-        imagem: 'https://br.web.img3.acsta.net/medias/nmedia/18/92/58/12/20207108.jpg',
-        id: 'prequel'
-    },
-    {
-        nome: 'Episódio 3 - Vingança dos Sith',
-        ano: 2005,
-        ordenacao: 'Sexto Lançamento',
-        imagem: 'https://br.web.img3.acsta.net/medias/nmedia/18/92/58/33/20207204.jpg',
-        id: 'prequel'
-    },
-    {
-        nome: 'Solo: Uma história de Star Wars',
-        ano: 2018,
-        ordenacao: 'Décimo Lançamento' ,
-        imagem: 'https://upload.wikimedia.org/wikipedia/pt/5/5c/Solo_A_Star_Wars_Story.jpg',
-        id: 'spin'
-    },
-    {
-        nome: 'Rogue One: Uma história de Star Wars',
-        ano: 2016,
-        ordenacao: 'Oitavo Lançamento' ,
-        imagem: 'https://i.pinimg.com/originals/37/e0/85/37e0857b9abe952bd2cd87064ec50508.jpg',
-        id: 'spin'
-    },
-    {
-        nome: 'Episódio 4 - Uma nova esperança',
-        ano: 1977,
-        ordenacao: 'Primeiro Lançamento',
-        imagem: 'https://images5.alphacoders.com/111/thumb-1920-1113726.jpg',
-        id: 'classica'
-
-    },
-    {
-        nome: 'Episódio 5 - O Império Contra-ataca',
-        ano: 1980,
-        ordenacao: 'Segundo Lançamento',
-        imagem: 'https://i.pinimg.com/474x/f5/a5/fc/f5a5fcfdd06cc3ec9f724698d28d2831.jpg',
-        id: 'classica'
-    },
-    {
-        nome: 'Episódio 6 - Retorno dos Jedi',
-        ano: 1983,
-        ordenacao: 'Terceiro Lançamento',
-        imagem: 'https://images3.alphacoders.com/111/thumb-1920-1115523.jpg',
-        id: 'classica'
-    },
-    {
-        nome: ' Episodio 7 - O Despertar da Força',
-        ano: 2015,
-        ordenacao: 'Sétimo Lançamento',
-        imagem: 'https://ingresso-a.akamaihd.net/img/cinema/cartaz/23815-cartaz.jpg',
-        id: 'nova'
-    },
-    {
-        nome: 'Episodio 8 - O Ultimo Jedi',
-        ano: 2017,
-        ordenacao: 'Nono Lançamento' ,
-        imagem: 'https://i.pinimg.com/originals/ca/70/81/ca7081d4a3ac2f45139d71d2204a78da.jpg',
-        id: 'nova'
-    },
-    {
-        nome: 'Episodio 9 - A Ascensão Skywalker',
-        ano: 2019,
-        ordenacao: 'Décimo Primeiro Lançamento' ,
-        imagem: 'https://i.pinimg.com/564x/79/47/69/794769619f4ea94e6a76e3ae0bb6192a.jpg',
-        id: 'nova'
-    }]
-
-    lista = (filme) => {
-        console.log(`____________________________________________________________________________________________________                                                                                                  
-        Nome: ${filme.nome}                                                                                                
-        Ano de Lançamento: ${filme.ano}                                                                                                  
-        Ordenação: ${filme.ordenacao}                                                                                     
-        Imagem: ${filme.imagem}                                                                                            
-        `)
+//forma menos verbosa, utilizando função factory.
+filmes = (nome,ano,ordenacao,imagem) => {
+    return {
+    nome ,
+    ano,
+    ordenacao,
+    imagem
     }
+}
 
-     mapAll = () => {
-        console.log (`-----------------------------------------------`)
-        console.log (`| Ordem de acordo com a cronologia dos fatos  |`)
-        console.log (`-----------------------------------------------`)
-        starWars.map(lista)
-    }
+f1 = filmes ('Episódio 1 - Ameaça Fantasma', 1999, 'Quarto Lançamento', 'https://i.pinimg.com/originals/61/1d/ba/611dba23cb1e960da85a261cfa8bb6e7.jpg')
+f2 = filmes ('Episódio 2 - Ataque dos clones', 2002, 'Quinto Lançamento', 'https://br.web.img3.acsta.net/medias/nmedia/18/92/58/33/20207204.jpg')
+f3 = filmes ('Episódio 3 - Vingança dos Sith', 2005, 'Sexto Lançamento', 'https://br.web.img3.acsta.net/medias/nmedia/18/92/58/33/20207204.jpg' )
+f4 = filmes ('Solo: Uma história de Star Wars', 2018, 'Décimo Lançamento', 'https://upload.wikimedia.org/wikipedia/pt/5/5c/Solo_A_Star_Wars_Story.jpg')
+f5 = filmes ('Rogue One: Uma história de Star Wars', 2016, 'Oitavo Lançamento', 'https://i.pinimg.com/originals/37/e0/85/37e0857b9abe952bd2cd87064ec50508.jpg')
+f6 = filmes ('Episódio 4 - Uma nova esperança', 1977, 'Primeiro Lançamento', 'https://images5.alphacoders.com/111/thumb-1920-1113726.jpg')
+f7 = filmes ('Episódio 5 - O Império Contra-ataca', 1980, 'Segundo Lançamento', 'https://i.pinimg.com/474x/f5/a5/fc/f5a5fcfdd06cc3ec9f724698d28d2831.jpg')
+f8 = filmes ('Episódio 6 - Retorno dos Jedi', 1983, 'Terceiro Lançamento', 'https://images3.alphacoders.com/111/thumb-1920-1115523.jpg')
+f9 = filmes (' Episodio 7 - O Despertar da Força', 2015, 'Sétimo Lançamento', 'https://ingresso-a.akamaihd.net/img/cinema/cartaz/23815-cartaz.jpg')
+f10 = filmes ('Episodio 8 - O Ultimo Jedi', 2017, 'Nono Lançamento', 'https://i.pinimg.com/originals/ca/70/81/ca7081d4a3ac2f45139d71d2204a78da.jpg')
+f11 = filmes ('Episodio 9 - A Ascensão Skywalker', 2019, 'Décimo Primeiro Lançamento', 'https://i.pinimg.com/564x/79/47/69/794769619f4ea94e6a76e3ae0bb6192a.jpg')
 
-    mapAll()
+lista = (filme) => {
+    console.log(`____________________________________________________________________________________________________                                                                                                  
+    Nome: ${filme.nome}                                                                                                
+    Ano de Lançamento: ${filme.ano}                                                                                                  
+    Ordenação: ${filme.ordenacao}                                                                                     
+    Imagem: ${filme.imagem}                                                                                            
+    `)
+}
 
-    classicTrilogy = () => {
-        console.log (`---------------------`)
-        console.log (`| Trilogia Clássica |`)
-        console.log (`---------------------`)
-        starWars.filter(starWars => starWars.id == 'classica').map(lista)
-        }
-    
-    
-    //classicTrilogy()
+sequencyTeam = () => {
+    console.log (`-----------------------------------------------`)
+    console.log (`| Ordem de acordo com a cronologia dos fatos  |`)
+    console.log (`-----------------------------------------------`)
+    console.log (lista(f1) , lista(f2) , lista(f3), lista(f4),lista(f5),lista(f6),lista(f7),lista(f8),lista(f9),lista(f10),lista(f11))
+}
 
-    prequelTrilogy = () => {
-        console.log (`--------------------`)
-        console.log (`| Trilogia Prequel |`)
-        console.log (`--------------------`)
-        starWars.filter(starWars => starWars.id == 'prequel').map(lista)
-    }
-    
-    //prequelTrilogy()
-    
-    newTrilogy = () => {
-        console.log (`-----------------`)
-        console.log (`| Nova Trilogia |`)
-        console.log (`-----------------`)
-        starWars.filter(starWars => starWars.id == 'nova').map(lista)
-    }
-    
-    //newTrilogy()
-    
-    spinOff = () => {
-        console.log (`-----------`)
-        console.log (`| Spin Off |`)
-        console.log (`-----------`)
-        starWars.filter(starWars => starWars.id == 'spin').map(lista)
-    }
+sequencyTeam()
 
-    //spinOff()
+classicTrilogy = () => {
+    console.log (`---------------------`)
+    console.log (`| Trilogia Clássica |`)
+    console.log (`---------------------`)
+    console.log (lista(f6), lista(f7), lista(f8))
+}
+
+//classicTrilogy()
+
+trilogiaPrequel = () => {
+    console.log (`--------------------`)
+    console.log (`| Trilogia Prequel |`)
+    console.log (`--------------------`)
+    console.log (lista(f1), lista(f2), lista(f3))
+}
+
+//trilogiaPrequel()
+
+novaTrilogia = () => {
+    console.log (`-----------------`)
+    console.log (`| Nova Trilogia |`)
+    console.log (`-----------------`)
+    console.log (lista(f9), lista(f10), lista(f11))
+}
+
+//novaTrilogia()
+
+spinOff = () => {
+    console.log (`-----------`)
+    console.log (`| SpinOff |`)
+    console.log (`-----------`)
+    console.log (lista(f4), lista(f5))
+}
+//spinOff()
