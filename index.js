@@ -118,7 +118,7 @@ const starWars = [{nome: 'Episódio 1 - Ameaça Fantasma',
         console.log (`${starWars[10].nome} | ano: ${starWars[10].ano} | Ordenação: ${starWars[10].ordenacao} | Imagem: ${starWars[10].imagem}`)
     }
     
-    newTrilogy()
+    //newTrilogy()
     
     spinOff = () => {
         console.log (`-----------`)
@@ -129,5 +129,5 @@ const starWars = [{nome: 'Episódio 1 - Ameaça Fantasma',
         console.log (` `)
         console.log (`${starWars[4].nome} | ano: ${starWars[4].ano} | Ordenação: ${starWars[4].ordenacao} | Imagem: ${starWars[4].imagem}`)
     }
-    
+
     //spinOff()
