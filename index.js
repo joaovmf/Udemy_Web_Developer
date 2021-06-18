@@ -1,8 +1,7 @@
-
-const StarWars = [{nome: 'Episódio 1 - Ameaça Fantasma',
+const starWars = [{nome: 'Episódio 1 - Ameaça Fantasma',
         ano: 1999,
         ordenacao: 'Quarto Lançamento',
-        imagem: 'https://upload.wikimedia.org/wikipedia/pt/3/30/Star_Wars_Epis%C3%B3dio_1_Amea%C3%A7a_Fantasma.jpg'
+        imagem: 'https://i.pinimg.com/originals/61/1d/ba/611dba23cb1e960da85a261cfa8bb6e7.jpg'
     },
 
     {
@@ -30,28 +29,28 @@ const StarWars = [{nome: 'Episódio 1 - Ameaça Fantasma',
         nome: 'Rogue One: Uma história de Star Wars',
         ano: 2016,
         ordenacao: 'Oitavo Lançamento' ,
-        imagem: 'https://upload.wikimedia.org/wikipedia/pt/thumb/6/62/Rogue_One_-_A_Star_Wars_Story.jpg/250px-Rogue_One_-_A_Star_Wars_Story.jpg'
+        imagem: 'https://i.pinimg.com/originals/37/e0/85/37e0857b9abe952bd2cd87064ec50508.jpg'
     },
 
     {
         nome: 'Episódio 4 - Uma nova esperança',
         ano: 1977,
         ordenacao: 'Primeiro Lançamento',
-        imagem: 'https://hqscomcafe.com.br/wp-content/uploads/2020/09/Frases-Star-Wars-Episodio-4-800x445.jpg'
+        imagem: 'https://images5.alphacoders.com/111/thumb-1920-1113726.jpg'
     },
     
     {
         nome: 'Episódio 5 - O Império Contra-ataca',
         ano: 1980,
         ordenacao: 'Segundo Lançamento',
-        imagem: 'http://3.bp.blogspot.com/_ZyBGdXZ4e5A/TM7dblW0iFI/AAAAAAAAT3s/p46dAyWo7wc/s400/5.jpg'
+        imagem: 'https://i.pinimg.com/474x/f5/a5/fc/f5a5fcfdd06cc3ec9f724698d28d2831.jpg'
     },
     
     {
         nome: 'Episódio 6 - Retorno dos Jedi',
         ano: 1983,
         ordenacao: 'Terceiro Lançamento',
-        imagem: 'https://upload.wikimedia.org/wikipedia/pt/thumb/b/b2/ReturnOfTheJediPoster1983.jpg/250px-ReturnOfTheJediPoster1983.jpg'
+        imagem: 'https://images3.alphacoders.com/111/thumb-1920-1115523.jpg'
     },
 
     {
@@ -65,7 +64,7 @@ const StarWars = [{nome: 'Episódio 1 - Ameaça Fantasma',
         nome: 'Episodio 8 - O Ultimo Jedi',
         ano: 2017,
         ordenacao: 'Nono Lançamento' ,
-        imagem: 'https://www.showmetech.com.br/wp-content/uploads//2017/12/swlastjedinewtrailer-imagem01.jpg'
+        imagem: 'https://i.pinimg.com/originals/ca/70/81/ca7081d4a3ac2f45139d71d2204a78da.jpg'
     },
 
      {
@@ -75,80 +74,69 @@ const StarWars = [{nome: 'Episódio 1 - Ameaça Fantasma',
         imagem: 'https://i.pinimg.com/564x/79/47/69/794769619f4ea94e6a76e3ae0bb6192a.jpg'
     }]
 
-    console.log (' ')
+     mapAll = () => {
+        console.log (`-----------------------------------------------`)
+        console.log (`| Ordem de acordo com a cronologia dos fatos  |`)
+        console.log (`-----------------------------------------------`)
+        starWars.map (montarFilmes = (filmes) => {
+        console.log (filmes.nome)
+        console.log (filmes.ano)
+        console.log (filmes.ordenacao)
+        console.log (filmes.imagem)
+        console.log (`___________________________________________________________________________________________________________________`)
+    })}
 
-sequenciaTime = () => {
-    console.log (`-----------------------------------------------`)
-    console.log (`| Ordem de acordo com a cronologia dos fatos  |`)
-    console.log (`-----------------------------------------------`)
-    for (i = 0; i < StarWars.length; i++) {
-        console.log(' ')
-        console.log (StarWars[i].nome)
-        console.log (`Ano: ${StarWars[i].ano} `)
-        console.log (`Ordenação: ${StarWars[i].ordenacao} `)
-        console.log (`Imagem: ${StarWars[i].imagem} `)
+    //mapAll()
+
+    classicTrilogy = () => {
+        console.log (`---------------------`)
+        console.log (`| Trilogia Clássica |`)
+        console.log (`---------------------`)
+        console.log (` `)
+        console.log (`${starWars[0].nome} | ano: ${starWars[0].ano} | Ordenação: ${starWars[0].ordenacao} | Imagem: ${starWars[0].imagem}`)
+        console.log (` `)
+        console.log (`${starWars[1].nome} | ano: ${starWars[1].ano} | Ordenação: ${starWars[1].ordenacao} | Imagem: ${starWars[1].imagem}`)
+        console.log (` `)
+        console.log (`${starWars[2].nome} | ano: ${starWars[2].ano} | Ordenação: ${starWars[2].ordenacao} | Imagem: ${starWars[2].imagem}`)
     }
-}
-
-//sequenciaTime()
-
-trilogiaClassica = () => {
-    console.log (`---------------------`)
-    console.log (`| Trilogia Clássica |`)
-    console.log (`---------------------`)
-    for (i = 0 ; i <= 2 ; i++) {
-        console.log(' ')
-        console.log (StarWars[i].nome)
-        console.log (`Ano: ${StarWars[i].ano} `)
-        console.log (`Ordenação: ${StarWars[i].ordenacao} `)
-        console.log (`Imagem: ${StarWars[i].imagem} `)
+    
+    //classicTrilogy()
+    
+    prequelTrilogy = () => {
+        console.log (`--------------------`)
+        console.log (`| Trilogia Prequel |`)
+        console.log (`--------------------`)
+        console.log(` `)
+        console.log (`${starWars[5].nome} | ano: ${starWars[5].ano} | Ordenação: ${starWars[5].ordenacao} | Imagem: ${starWars[5].imagem}`)
+        console.log (` `)
+        console.log (`${starWars[6].nome} | ano: ${starWars[6].ano} | Ordenação: ${starWars[6].ordenacao} | Imagem: ${starWars[6].imagem}`)
+        console.log (` `)
+        console.log (`${starWars[7].nome} | ano: ${starWars[7].ano} | Ordenação: ${starWars[7].ordenacao} | Imagem: ${starWars[7].imagem}`)
     }
-}
-
-//trilogiaClassica()
-
-trilogiaPrequel = () => {
-    console.log (`--------------------`)
-    console.log (`| Trilogia Prequel |`)
-    console.log (`--------------------`)
-    for (i = 5 ; i <= 7 ; i++) {
-    console.log(' ')
-    console.log (StarWars[i].nome)
-        console.log (`Ano: ${StarWars[i].ano} `)
-        console.log (`Ordenação: ${StarWars[i].ordenacao} `)
-        console.log (`Imagem: ${StarWars[i].imagem} `)
+    
+    //prequelTrilogy()
+    
+    newTrilogy = () => {
+        console.log (`-----------------`)
+        console.log (`| Nova Trilogia |`)
+        console.log (`-----------------`)
+        console.log (` `)
+        console.log (`${starWars[8].nome} | ano: ${starWars[8].ano} | Ordenação: ${starWars[8].ordenacao} | Imagem: ${starWars[8].imagem}`)
+        console.log (` `)
+        console.log (`${starWars[9].nome} | ano: ${starWars[9].ano} | Ordenação: ${starWars[9].ordenacao} | Imagem: ${starWars[9].imagem}`)
+        console.log (` `)
+        console.log (`${starWars[10].nome} | ano: ${starWars[10].ano} | Ordenação: ${starWars[10].ordenacao} | Imagem: ${starWars[10].imagem}`)
     }
-}
-
-//trilogiaPrequel()
-
-novaTrilogia = () => {
-    console.log (`-----------------`)
-    console.log (`| Nova Trilogia |`)
-    console.log (`-----------------`)
-    for (i = 8 ; i <= 10 ; i++) {
-    console.log(' ')
-    console.log (StarWars[i].nome)
-        console.log (`Ano: ${StarWars[i].ano} `)
-        console.log (`Ordenação: ${StarWars[i].ordenacao} `)
-        console.log (`Imagem: ${StarWars[i].imagem} `)
+    
+    newTrilogy()
+    
+    spinOff = () => {
+        console.log (`-----------`)
+        console.log (`| Spin Off |`)
+        console.log (`-----------`)
+        console.log (` `)
+        console.log (`${starWars[3].nome} | ano: ${starWars[3].ano} | Ordenação: ${starWars[3].ordenacao} | Imagem: ${starWars[3].imagem}`)
+        console.log (` `)
+        console.log (`${starWars[4].nome} | ano: ${starWars[4].ano} | Ordenação: ${starWars[4].ordenacao} | Imagem: ${starWars[4].imagem}`)
     }
-}
-
-//novaTrilogia()
-
-spinOff = () => {
-    console.log (`-----------`)
-    console.log (`| SpinOff |`)
-    console.log (`-----------`)
-    for (i = 3 ; i <= 4 ; i++) {
-    console.log(' ')
-    console.log (StarWars[i].nome)
-        console.log (`Ano: ${StarWars[i].ano} `)
-        console.log (`Ordenação: ${StarWars[i].ordenacao} `)
-        console.log (`Imagem: ${StarWars[i].imagem} `)
-    }
-}
-
-//spinOff()
-
+    //spinOff()
